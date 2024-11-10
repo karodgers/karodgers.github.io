@@ -237,10 +237,10 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.03);
     border-radius: 16px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
   
 .stat-card {
@@ -277,9 +277,8 @@ body {
     grid-column: 1 / -1;
     text-align: center;
     padding: 1.5rem;
-    background: var(--card-bg);
+    background: #000;
     border-radius: 12px;
-    /* border: 1px solid var(--accent-red); */
 }
   
 .tech-stack h3 {
@@ -440,7 +439,7 @@ body {
 }
 
 .stat-card {
-    background: var(--card-bg);
+    background: #000;
     padding: 3rem 2rem;
     border-radius: 16px;
     text-align: center;

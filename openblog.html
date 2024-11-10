@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodgers Kaunda - Full Stck Software Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+        /* Container for the entire blog post */
+        .blog-open-section {
+          background-color: #0a0a0a;
+          color: #e0e0e0;
+          padding: 4rem 5%;
+          max-width: 900px;
+          margin: 0 auto;
+          border-radius: 12px;
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+          position: relative;
+        }
+      
+        /* Header Section */
+        .blog-header {
+          text-align: center;
+          margin-bottom: 2.5rem;
+        }
+      
+        .blog-title {
+          font-size: 2.8rem;
+          font-weight: 700;
+          line-height: 1.2;
+          color: #ff4d4d;
+          margin: 0;
+        }
+      
+        .blog-date {
+          font-size: 1rem;
+          color: #888;
+          margin-top: 0.5rem;
+        }
+      
+        /* Image Section with Gradient Overlay */
+        .blog-image {
+          width: 100%;
+          height: 400px;
+          position: relative;
+          margin-bottom: 2.5rem;
+          overflow: hidden;
+          border-radius: 12px;
+        }
+      
+        .blog-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: grayscale(20%);
+          transition: transform 0.5s ease, filter 0.5s ease;
+        }
+      
+        .blog-image:hover img {
+          transform: scale(1.05);
+          filter: grayscale(0%);
+        }
+      
+        .image-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+          border-radius: 12px;
+        }
+      
+        /* Blog Content */
+        .blog-content {
+          font-size: 1.2rem;
+          line-height: 1.75;
+          color: #ddd;
+          margin-bottom: 3rem;
+          max-width: 95%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      
+        .blog-content p {
+          margin-bottom: 1.5rem;
+        }
+      
+        /* Footer Section */
+        .blog-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-top: 2rem;
+          border-top: 1px solid rgba(255, 0, 0, 0.2);
+          font-size: 1rem;
+        }
+      
+        .author-info {
+          display: flex;
+          align-items: center;
+          color: #fff;
+        }
+      
+        .author-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-right: 1rem;
+          border: 2px solid #ff4d4d;
+        }
+      
+        .author-name {
+          font-weight: bold;
+          color: #ff4d4d;
+        }
+      
+        /* Back to Blogs Button */
+        .back-to-blogs {
+          color: #ff4d4d;
+          text-decoration: none;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          transition: color 0.3s ease;
+          font-size: 1rem;
+        }
+      
+        .back-to-blogs:hover {
+          color: #ff8080;
+        }
+      
+        .back-to-blogs svg {
+          width: 20px;
+          height: 20px;
+          margin-right: 0.5rem;
+          fill: currentColor;
+        }
+      </style>
+</head>
+<body>
+    <!-- Custom cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-container">
+            <img src="/images/rogy.png" alt="Rodgers" class="profile-img">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="active"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="#services"><i class="fas fa-laptop-code"></i>Services</a></li>
+                <li><a href="#projects"><i class="fas fa-briefcase"></i>Projects</a></li>
+                <!-- <li><a href="#about"><i class="fas fa-user"></i>About</a></li> -->
+                <li><a href="#experience"><i class="fas fa-user"></i>Experience</a></li>
+                <li> <a href="#blog"><i class="fas fa-blog"></i>Blog</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+        </div>
+    </aside>
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="blog-open-section">
+            <div class="blog-header">
+              <h1 class="blog-title">The Future of Web Development: What's Next in 2025</h1>
+              <div class="blog-date">Published on November 8, 2024</div>
+            </div>
+          
+            <div class="blog-image">
+              <img src="/api/placeholder/900/450" alt="Blog Image">
+              <div class="image-overlay"></div>
+            </div>
+          
+            <div class="blog-content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a nisi sit amet dolor fringilla vehicula. Vestibulum in sapien a quam vehicula convallis. Nulla facilisi.</p>
+              <p>Quisque maximus metus sed semper fermentum. Nam laoreet nisl eu nisi commodo, ut placerat quam varius. Donec dignissim, orci at ultricies venenatis, nulla felis facilisis ex, et bibendum eros augue at nulla.</p>
+              <p>Curabitur vestibulum velit nec urna feugiat, id dapibus ligula gravida. Fusce vel est et ipsum blandit facilisis. Integer consequat risus vitae erat facilisis, in varius ipsum hendrerit.</p>
+            </div>
+          
+            <div class="blog-footer">
+              <div class="author-info">
+                <img src="/api/placeholder/60/60" alt="Author Avatar" class="author-avatar">
+                <div>
+                  <div class="author-name">John Doe</div>
+                  <div>Lead Author</div>
+                </div>
+              </div>
+              <a href="/blogs" class="back-to-blogs">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                </svg>
+                Back to Blogs
+              </a>
+            </div>
+          </section>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
