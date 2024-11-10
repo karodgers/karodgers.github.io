@@ -528,7 +528,7 @@ body {
 }
 
 /* Custom Cursor */
-.custom-cursor {
+/* .custom-cursor {
     width: 20px;
     height: 20px;
     border: 2px solid var(--accent-red);
@@ -538,7 +538,7 @@ body {
     z-index: 9999;
     transition: transform 0.1s;
     mix-blend-mode: difference;
-}
+} */
 
 /* contact section */
 .contact-section {
