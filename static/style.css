@@ -8,8 +8,8 @@
 }
 
 :root {
-    --bg-primary: #0a0a0a;
-    --bg-secondary: #111111;
+    --bg-primary: #000000;
+    --bg-secondary: #000000;
     --accent-red: #ff3333;
     --accent-red-dark: #cc0000;
     --text-primary: #ffffff;
@@ -50,7 +50,7 @@ body {
     height: 100vh;
     background: var(--bg-secondary);
     padding: 2.5rem;
-    border-right: 1px solid rgba(255, 51, 51, 0.1);
+    border-right: 1px solid rgba(255, 51, 51, 0.28);
     display: flex;
     flex-direction: column;
     z-index: 1000;
@@ -113,7 +113,7 @@ body {
 }
 
 .nav-links a:hover, .nav-links a.active {
-    background: var(--card-bg);
+    background: #222;
     color: var(--accent-red);
     transform: translateX(5px);
 }
@@ -303,7 +303,7 @@ body {
     color: var(--accent-red);
 }
   
-  /* Media Queries */
+/* Media Queries */
 @media (max-width: 1024px) {
     .hero-section {
       flex-direction: column;
@@ -320,9 +320,9 @@ body {
       max-width: 100%;
       margin-top: 2rem;
     }
-  }
+}
   
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .hero-stats {
       grid-template-columns: 1fr;
       gap: 1rem;
