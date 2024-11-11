@@ -935,7 +935,7 @@ body {
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(0px);
 }
 
 .service-card:hover img {
