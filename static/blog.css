@@ -13,11 +13,13 @@ body {
 
 .hero-section {
     position: relative;
-    min-height: 60vh;
+    min-height: 40vh;
     background: linear-gradient(45deg, #000, #ff0000);
     padding: 4rem 2rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .content-wrapper {
@@ -28,7 +30,8 @@ body {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .hero-title {
@@ -41,7 +44,8 @@ body {
 .hero-subtitle {
     font-size: 1.25rem;
     opacity: 0.9;
-    max-width: 600px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .author-section {
@@ -237,6 +241,10 @@ body {
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
     }
 
     .hero-section {
