@@ -24,6 +24,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
+    margin-left: calc(280px + (100% - 280px - 1200px) / 2); /* Centers content while accounting for sidebar */
 }
 
 .hero-content {
@@ -104,6 +105,7 @@ body {
     max-width: 800px;
     margin: 4rem auto;
     padding: 0 2rem;
+    margin-left: calc(280px + (100% - 280px - 800px) / 2); /* Centers content while accounting for sidebar */
 }
 
 .content-section h2 {
@@ -182,6 +184,55 @@ body {
     opacity: 0.7;
     margin-top: 1rem;
 }
+
+/* Media queries for tablet and mobile */
+
+/* Media queries for tablet and mobile */
+@media (max-width: 1480px) {
+    .content-section {
+        margin: 4rem 0 4rem 280px; /* Fallback when screen isn't wide enough to center */
+    }
+    
+    .content-wrapper {
+        margin: 0 0 0 280px; /* Fallback when screen isn't wide enough to center */
+    }
+}
+
+@media (max-width: 768px) {
+    .content-section {
+        margin: 4rem auto; /* Center on mobile */
+        padding: 0 1.5rem;
+        width: 100%;
+    }
+
+    .content-wrapper {
+        margin: 0 auto; /* Center on mobile */
+        padding: 0 1.5rem;
+    }
+    
+    /* Adjust text sizes for better mobile reading */
+    .content-section h2 {
+        font-size: 2rem;
+    }
+    
+    .content-section h3 {
+        font-size: 1.25rem;
+    }
+    
+    .content-section p {
+        font-size: 1rem;
+    }
+    
+    .key-insight {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .key-insight h3 {
+        font-size: 1.25rem;
+    }
+}
+
 
 @media (max-width: 768px) {
     .hero-title {
