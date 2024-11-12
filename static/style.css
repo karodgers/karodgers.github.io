@@ -276,31 +276,84 @@ body {
 .tech-stack {
     grid-column: 1 / -1;
     text-align: center;
-    padding: 1.5rem;
-    background: #000;
+    padding: 2rem;
     border-radius: 12px;
+    position: relative;
+    overflow: hidden;
 }
+
   
 .tech-stack h3 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-    color: #ff3333;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    color: var(--accent-red);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
 }
   
 .tech-icons {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
   
 .tech-icons i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--text-secondary);
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
 }
   
 .tech-icons i:hover {
     color: var(--accent-red);
+    transform: translateY(-5px);
+    filter: drop-shadow(0 0 10px rgba(255, 51, 51, 0.5));
+}
+  
+.tech-icons i::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    color: var(--accent-red);
+}
+  
+.tech-icons i:hover::after {
+    opacity: 1;
+}
+  
+@keyframes scanline {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  /* Floating animation for icons */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+.tech-icons i {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.2s);
 }
   
 /* Media Queries */

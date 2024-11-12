@@ -17,6 +17,27 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.toggle('active');
     });
 });
+
+// Teck Stack Add hover effect with mouse tracking
+document.querySelectorAll('.tech-icons i').forEach(icon => {
+    icon.addEventListener('mousemove', (e) => {
+      const bounds = icon.getBoundingClientRect();
+      const mouseX = e.clientX - bounds.left;
+      const mouseY = e.clientY - bounds.top;
+      const centerX = bounds.width / 2;
+      const centerY = bounds.height / 2;
+      
+      const angleX = (mouseY - centerY) / 10;
+      const angleY = (centerX - mouseX) / 10;
+      
+      icon.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(10px)`;
+    });
+    
+    icon.addEventListener('mouseleave', () => {
+      icon.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
+    });
+});
+
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Get all sections and navigation links
