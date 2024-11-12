@@ -1,9 +1,9 @@
 // Custom cursor
-document.addEventListener('mousemove', (e) => {
-    const cursor = document.querySelector('.custom-cursor');
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
+// document.addEventListener('mousemove', (e) => {
+//     const cursor = document.querySelector('.custom-cursor');
+//     cursor.style.left = e.clientX + 'px';
+//     cursor.style.top = e.clientY + 'px';
+// });
 
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,6 +36,19 @@ document.querySelectorAll('.tech-icons i').forEach(icon => {
     icon.addEventListener('mouseleave', () => {
       icon.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
     });
+});
+
+// blog page smooth scroll reveal animation
+document.addEventListener('DOMContentLoaded', () => {
+    const heroContent = document.querySelector('.hero-content');
+    heroContent.style.opacity = '0';
+    heroContent.style.transform = 'translateY(20px)';
+    
+    setTimeout(() => {
+        heroContent.style.transition = 'all 0.8s ease';
+        heroContent.style.opacity = '1';
+        heroContent.style.transform = 'translateY(0)';
+    }, 100);
 });
 
 // Wait for the DOM to be fully loaded
