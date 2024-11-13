@@ -5,6 +5,66 @@
 //     cursor.style.top = e.clientY + 'px';
 // });
 
+// preload processing
+document.addEventListener('DOMContentLoaded', function() {
+    document.documentElement.style.visibility = 'visible';
+    document.documentElement.style.opacity = 1;
+});
+
+// HTTPMethodHandler class
+class HTTPMethodHandler {
+    constructor() {
+      this.routes = {};
+    }
+  
+    registerRoute(path, method, handler) {
+      if (!this.routes[path]) {
+        this.routes[path] = {};
+      }
+      this.routes[path][method.toLowerCase()] = handler;
+    }
+  
+    handleRequest(path, method, req, res) {
+      if (this.routes[path] && this.routes[path][method.toLowerCase()]) {
+        this.routes[path][method.toLowerCase()](req, res);
+      } else {
+        res.status(404).send('Not Found');
+      }
+    }
+  }
+  
+  // Example usage for the index page
+  const indexHandler = new HTTPMethodHandler();
+  
+  // GET requests
+  indexHandler.registerRoute('/', 'GET', (req, res) => {
+    // Serve the index page
+    res.sendFile('index.html');
+  });
+  
+  // POST requests (for the contact form)
+  indexHandler.registerRoute('/contact', 'POST', (req, res) => {
+    // Handle the contact form submission
+    const { name, email, message } = req.body;
+    // Process the form data and send a response
+    res.status(200).send('Message received!');
+  });
+  
+  // Handle all requests to the index page
+  document.querySelector('form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const requestBody = Object.fromEntries(formData.entries());
+    indexHandler.handleRequest('/', 'POST', requestBody, {
+      status: (code) => ({
+        send: (message) => {
+          // Handle the response from the server
+          console.log(`Response code: ${code}, Message: ${message}`);
+        }
+      })
+    });
+});
+
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.querySelector('.sidebar');
