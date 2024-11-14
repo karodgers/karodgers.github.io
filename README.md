@@ -85,6 +85,6 @@ Contributions are welcome! If you'd like to improve the site or add new features
 
     Open a pull request.
 
-📝 License
+## 📝 License
 
 This project is licensed under the MIT License. You are free to use and modify this project as per the terms of the license.
