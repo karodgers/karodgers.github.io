@@ -578,19 +578,6 @@ body {
     color: var(--text-secondary);
 }
 
-/* Custom Cursor */
-/* .custom-cursor {
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--accent-red);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s;
-    mix-blend-mode: difference;
-} */
-
 /* contact section */
 .contact-section {
     background-color: #000;
@@ -800,6 +787,7 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    height: 450px; 
 }
 
 .blog-card:hover {
@@ -826,7 +814,7 @@ body {
 
 .blog-image {
     width: 100%;
-    height: 200px;
+    height: 100px; 
     position: relative;
     overflow: hidden;
 }
