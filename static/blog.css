@@ -26,7 +26,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    margin-left: calc(280px + (100% - 280px - 1200px) / 2); /* Centers content while accounting for sidebar */
+    margin-left: calc(280px + (100% - 280px - 1200px) / 2);
 }
 
 .hero-content {
@@ -106,12 +106,30 @@ body {
 
 /* content section */
 .content-section {
-    max-width: 800px;
+    max-width: 1250px;
     margin: 4rem auto;
     padding: 0 2rem;
-    margin-left: calc(280px + (100% - 280px - 800px) / 2); /* Centers content while accounting for sidebar */
+    width: calc(100% - 280px); 
+    margin-left: 280px; 
 }
 
+/* Media query for larger screens to center the content */
+@media screen and (min-width: 1530px) { 
+    .content-section {
+        margin-left: calc(280px + (100% - 1530px) / 2);
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .content-section {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+}
+
+/* Rest of your existing styles */
 .content-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -143,13 +161,15 @@ body {
     margin: 0;
 }
 
+/* Content quote styling */
 .content-quote {
     font-size: 1.75rem;
     line-height: 1.4;
-    padding: 3rem 0;
+    padding: 3rem 2rem; /* Added horizontal padding */
     text-align: center;
     font-style: italic;
     position: relative;
+    margin: 2rem 0;
 }
 
 .content-quote::before,
@@ -163,58 +183,68 @@ body {
 
 .content-quote::before {
     top: 1rem;
-    left: -2rem;
+    left: 0;
 }
 
 .content-quote::after {
     bottom: 1rem;
-    right: -2rem;
+    right: 0;
 }
 
-.image-section {
-    margin: 3rem 0;
-    border-radius: 12px;
-    overflow: hidden;
+/* Media queries for responsive quote */
+@media screen and (max-width: 768px) {
+    .content-section {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+    
+    .content-quote {
+        font-size: 1.5rem;
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .content-quote::before,
+    .content-quote::after {
+        font-size: 3rem;
+    }
 }
 
-.image-section img {
-    width: 100%;
-    height: auto;
+@media screen and (max-width: 480px) {
+    .content-quote {
+        font-size: 1.25rem;
+        padding: 2rem 1rem;
+    }
+    
+    .content-quote::before,
+    .content-quote::after {
+        font-size: 2.5rem;
+    }
 }
-
-.image-caption {
-    text-align: center;
-    font-size: 0.875rem;
-    opacity: 0.7;
-    margin-top: 1rem;
-}
-
-/* Media queries for tablet and mobile */
 
 /* Media queries for tablet and mobile */
 @media (max-width: 1480px) {
     .content-section {
-        margin: 4rem 0 4rem 280px; /* Fallback when screen isn't wide enough to center */
+        margin: 4rem 0 4rem 280px; 
     }
     
     .content-wrapper {
-        margin: 0 0 0 280px; /* Fallback when screen isn't wide enough to center */
+        margin: 0 0 0 280px; 
     }
 }
 
 @media (max-width: 768px) {
     .content-section {
-        margin: 4rem auto; /* Center on mobile */
+        margin: 4rem auto; 
         padding: 0 1.5rem;
         width: 100%;
     }
 
     .content-wrapper {
-        margin: 0 auto; /* Center on mobile */
+        margin: 0 auto; 
         padding: 0 1.5rem;
     }
     
-    /* Adjust text sizes for better mobile reading */
     .content-section h2 {
         font-size: 2rem;
     }
