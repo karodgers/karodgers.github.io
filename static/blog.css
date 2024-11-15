@@ -281,3 +281,21 @@ body {
         padding: 3rem 1.5rem;
     }
 }
+
+
+/* Style for share buttons */
+
+
+/* Mobile-specific styles (show on screens 768px or smaller) */
+@media (max-width: 768px) {
+    .mobile-only {
+        display: inline-flex; /* Show on mobile */
+    }
+}
+
+/* Hide the buttons on larger screens (tablets, desktops) */
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none; /* Hide on large screens */
+    }
+}
