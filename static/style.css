@@ -1062,7 +1062,7 @@ body {
 
 @media (max-width: 768px) {
     .service-card {
-        grid-template-columns: 1fr; /* Stack in a single column on smaller screens */
+        grid-template-columns: 1fr; 
     }
 }
 

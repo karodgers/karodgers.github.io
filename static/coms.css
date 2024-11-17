@@ -1,0 +1,89 @@
+/* coms notifications */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  z-index: 1000;
+  background: #1a1a1a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #ff0000;
+  font-family: 'system-ui', -apple-system, sans-serif;
+  animation: slideInAndFade 0.3s ease-out forwards,
+             fadeOut 0.5s ease-in forwards 3.5s;
+  backdrop-filter: blur(8px);
+  transform-origin: center right;
+}
+
+.notification.success {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-left-color: #ff0000;
+}
+
+.notification.error {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-left-color: #ff3333;
+}
+
+@keyframes slideInAndFade {
+  0% {
+    transform: translateX(100%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(10px) scale(0.9);
+    opacity: 0;
+  }
+}
+
+.notification:hover {
+  transform: translateY(-3px);
+  transition: transform 0.2s ease;
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn:disabled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 0, 0, 0.2),
+    transparent
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

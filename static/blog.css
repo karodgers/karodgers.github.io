@@ -113,22 +113,6 @@ body {
     margin-left: 280px; 
 }
 
-/* Media query for larger screens to center the content */
-@media screen and (min-width: 1530px) { 
-    .content-section {
-        margin-left: calc(280px + (100% - 1530px) / 2);
-    }
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .content-section {
-        width: 100%;
-        margin-left: 0;
-        padding: 0 1rem;
-    }
-}
-
 /* Rest of your existing styles */
 .content-section h2 {
     font-size: 2.5rem;
@@ -165,7 +149,7 @@ body {
 .content-quote {
     font-size: 1.75rem;
     line-height: 1.4;
-    padding: 3rem 2rem; /* Added horizontal padding */
+    padding: 3rem 2rem; 
     text-align: center;
     font-style: italic;
     position: relative;
@@ -282,20 +266,31 @@ body {
     }
 }
 
-
-/* Style for share buttons */
-
-
-/* Mobile-specific styles (show on screens 768px or smaller) */
+/* Mobile-specific styles */
 @media (max-width: 768px) {
     .mobile-only {
-        display: inline-flex; /* Show on mobile */
+        display: inline-flex; 
     }
 }
 
-/* Hide the buttons on larger screens (tablets, desktops) */
 @media (min-width: 769px) {
     .mobile-only {
-        display: none; /* Hide on large screens */
+        display: none; 
+    }
+}
+
+/* Media query for larger screens to center the content */
+@media screen and (min-width: 1530px) { 
+    .content-section {
+        margin-left: calc(280px + (100% - 1530px) / 2);
+    }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .content-section {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 1rem;
     }
 }
