@@ -34,13 +34,12 @@ Here's an overview of the project structure:
 
     Responsive Design: Optimized for different screen sizes and devices.
     Smooth Animations: Subtle CSS animations for a modern feel.
-    Dynamic Content: JavaScript-driven interactivity, such as project filtering, form validation, or light/dark mode.
+    Dynamic Content: JavaScript-driven interactivity.
     SEO Optimized: Basic SEO to improve visibility on search engines.
-    Accessible: Follows accessibility guidelines to ensure a better user experience for everyone.
 
 ## ✨ Highlights
 
-    Projects Section: A showcase of my work with links to live demos and source code.
+    Projects Section: A showcase of my work with links to source code.
     About Me: A brief introduction to who I am and what I do.
     Contact Form: A simple form for visitors to get in touch with me.
     Skills: Technologies and tools I work with, presented in an organized manner.
@@ -49,7 +48,7 @@ Here's an overview of the project structure:
 
     Clone this repository:
 
-    git clone https://github.com/your-github-username/karodgers.github.io.git
+    git clone https://github.com/karodgers.github.io.git
 
     Navigate to the project folder:
 
