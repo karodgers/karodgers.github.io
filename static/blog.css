@@ -398,3 +398,171 @@ strong {
         font-size: 1.5rem;
     }
 }
+
+/* ===== Design Showcase Section ===== */
+.design-showcase {
+    display: flex;
+    overflow-x: auto;
+    gap: 2.5rem;
+    padding: 3rem 0;
+    scroll-behavior: smooth;
+}
+
+.design-item {
+    flex: 0 0 auto;
+    width: 320px;
+    background: #0a0a0a;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.design-item:hover {
+    transform: translateY(-10px);
+    border-color: #ff0000;
+    box-shadow: 0 15px 40px rgba(255,0,0,0.2);
+}
+
+.design-image {
+    padding: 25px;
+    background: linear-gradient(45deg, #1a1a1a 0%, #0d0d0d 100%);
+    position: relative;
+}
+
+.design-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: #ff0000;
+    opacity: 0.3;
+}
+
+.design-image img {
+    width: auto;
+    height: 420px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+}
+
+.design-info {
+    padding: 1.8rem;
+}
+
+/* ===== Typography ===== */
+.design-title {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.design-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #ff0000;
+    border-radius: 50%;
+}
+
+.design-description {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Figma Button ===== */
+.figma-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    color: white !important;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 15px rgba(255,0,0,0.2);
+}
+
+.figma-button i {
+    font-size: 1.2rem;
+}
+
+.figma-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255,0,0,0.3);
+    background: linear-gradient(135deg, #ff1a1a 0%, #dd0000 100%);
+}
+
+
+/* ===== Scrollbar Styling ===== */
+.design-showcase::-webkit-scrollbar {
+    height: 8px;
+}
+
+.design-showcase::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+.design-showcase::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== Mobile Optimization ===== */
+@media (max-width: 768px) {
+    .design-item {
+        width: 280px;
+    }
+    
+    .design-image img {
+        height: 320px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .figma-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== Content Section Spacing ===== */
+.content-section {
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.key-insight {
+    background: rgba(255,0,0,0.05);
+    border-left: 4px solid #ff0000;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+}
+/* Add centering style for images */
+.design-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
