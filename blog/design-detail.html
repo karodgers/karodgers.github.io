@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Detail | Rodgers Kaunda</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/blog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="icon" href="../images/portfolio/favicon.ico" type="image/x-icon">
+    <style>
+
+        /* Portfolio Detail Specific Styles */
+        .portfolio-detail-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .portfolio-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .portfolio-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff0909b8;
+        }
+
+        .portfolio-header p {
+            color: #ffffff;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .portfolio-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5rem;
+            gap: 3rem;
+        }
+
+        .portfolio-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .portfolio-image {
+            flex: 1;
+            min-width: 0;
+        }
+        .portfolio-image img {
+            width: 300px; /* Adjust width to match a typical phone screen */
+            height: 550px; /* Set height to maintain phone-like proportions */
+            object-fit: contain; /* Ensures the whole image is visible */
+            border-radius: 20px; /* More rounded corners for a phone-like effect */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .tech-item {
+            background: #ff0c0c;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .portfolio-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .portfolio-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .portfolio-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #ffffffc2;
+        }
+
+        .portfolio-content p {
+            color: #ddd9d9;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list i {
+            color: #ff0000;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #ff0000;
+            transform: translateY(-3px);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .portfolio-section, 
+            .portfolio-section:nth-child(even) {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .portfolio-image, 
+            .portfolio-content {
+                width: 100%;
+            }
+
+            .portfolio-header h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .portfolio-detail-container {
+                padding: 1.5rem;
+            }
+
+            .portfolio-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .portfolio-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-container">
+            <img src="../images/portfolio/rogy.png" alt="Rodgers" class="profile-img">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="active"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="/#services"><i class="fas fa-laptop-code"></i>Services</a></li>
+                <li><a href="/#projects"><i class="fas fa-briefcase"></i>Projects</a></li>
+                <li><a href="/#experience"><i class="fas fa-user"></i>Experience</a></li>
+                <li><a href="/#blog"><i class="fas fa-blog"></i>Blog</a></li>
+                <li><a href="/#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="social-links">
+            <a href="https://x.com/mi_ni_mjanja" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.github.com/karodgers" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rodgers-kaunda/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="portfolio-detail-container">
+        <div class="portfolio-header">
+            <h1>Eshoppy E-commerce Platform</h1>
+            <p>A complete redesign of the shopping experience with focus on conversion optimization and user engagement</p>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="portfolio-section">
+            <div class="portfolio-image">
+                <img src="../images/portfolio/eshoppy-removebg-preview.png" alt="Eshoppy Home Screen">
+            </div>
+            <div class="portfolio-content">
+                <h2>Modern Home Interface</h2>
+                <p>The home screen design focuses on immediate product discovery with personalized recommendations based on user behavior. The clean layout maintains brand identity while prioritizing key actions.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Dynamic content sections that adapt to user preferences</li>
+                    <li><i class="fas fa-check-circle"></i> Contextual navigation with mega-menu for quick access</li>
+                    <li><i class="fas fa-check-circle"></i> Integrated search with visual suggestions</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-item">Figma</span>
+                    <span class="tech-item">Adobe XD</span>
+                    <span class="tech-item">User Research</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="portfolio-section">
+            <div class="portfolio-image">
+                <img src="../images/portfolio/eshoppy-removebg-preview.png" alt="Product Page Design">
+            </div>
+            <div class="portfolio-content">
+                <h2>Enhanced Product Discovery</h2>
+                <p>The product page redesign increased conversion by 28% through improved media presentation and strategic placement of trust elements.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Interactive 360° product viewer</li>
+                    <li><i class="fas fa-check-circle"></i> Size recommendation algorithm integration</li>
+                    <li><i class="fas fa-check-circle"></i> Contextual upsell and cross-sell modules</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-item">Prototyping</span>
+                    <span class="tech-item">A/B Testing</span>
+                    <span class="tech-item">Hotjar Analytics</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="portfolio-section">
+            <div class="portfolio-image">
+                <img src="../images/portfolio/eshoppy-removebg-preview.png" alt="Shopping Cart Design">
+            </div>
+            <div class="portfolio-content">
+                <h2>Streamlined Checkout Flow</h2>
+                <p>The redesigned cart and checkout process reduced abandonment by 35% through progressive disclosure and clear progress indicators.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> One-page checkout with smart form validation</li>
+                    <li><i class="fas fa-check-circle"></i> Real-time shipping cost calculator</li>
+                    <li><i class="fas fa-check-circle"></i> Multiple payment options with security badges</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-item">UX Writing</span>
+                    <span class="tech-item">Micro-interactions</span>
+                    <span class="tech-item">Conversion Optimization</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="portfolio-section">
+            <div class="portfolio-image">
+                <img src="../images/portfolio/eshoppy-removebg-preview.png" alt="User Dashboard">
+            </div>
+            <div class="portfolio-content">
+                <h2>Personalized User Dashboard</h2>
+                <p>The account dashboard provides users with order tracking, wishlist management, and personalized recommendations in a unified interface.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check-circle"></i> Visual order tracking with timeline</li>
+                    <li><i class="fas fa-check-circle"></i> Saved items with inventory alerts</li>
+                    <li><i class="fas fa-check-circle"></i> Reward points visualization</li>
+                </ul>
+                <div class="tech-stack">
+                    <span class="tech-item">User Testing</span>
+                    <span class="tech-item">Data Visualization</span>
+                    <span class="tech-item">iOS/Android</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="/#projects" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+    </div>
+
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <script src="../static/script.js"></script>
+    <script>
+        // Dynamic content loading based on URL parameter
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const project = urlParams.get('project');
+            
+            // You would typically fetch this data from an API or database
+            const projects = {
+                'eshoppy': {
+                    title: 'Eshoppy E-commerce Platform',
+                    description: 'A complete redesign of the shopping experience with focus on conversion optimization and user engagement',
+                    images: {
+                        home: '../images/portfolio/eshoppy-home.jpg',
+                        product: '../images/portfolio/eshoppy-product.jpg',
+                        cart: '../images/portfolio/eshoppy-cart.jpg',
+                        dashboard: '../images/portfolio/eshoppy-dashboard.jpg'
+                    }
+                },
+                'beatflow': {
+                    title: 'BeatFlow Music Streaming',
+                    description: 'Next-gen music player interface with dynamic waveform visualization and smart playlist curation',
+                    images: {
+                        home: '../images/portfolio/beatflow-home.jpg',
+                        player: '../images/portfolio/beatflow-player.jpg',
+                        discover: '../images/portfolio/beatflow-discover.jpg',
+                        playlist: '../images/portfolio/beatflow-playlist.jpg'
+                    }
+                }
+            };
+
+            if (project && projects[project]) {
+                document.title = projects[project].title + ' | Rodgers Kaunda';
+                document.querySelector('.portfolio-header h1').textContent = projects[project].title;
+                document.querySelector('.portfolio-header p').textContent = projects[project].description;
+                
+                // Update images - in a real app you would update all content dynamically
+                document.querySelector('.portfolio-section:nth-child(1) img').src = projects[project].images.home;
+                document.querySelector('.portfolio-section:nth-child(2) img').src = projects[project].images.product;
+                // Continue for other images...
+            }
+        });
+    </script>
+</body>
+</html>
