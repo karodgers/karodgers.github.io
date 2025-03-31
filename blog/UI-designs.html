@@ -33,8 +33,10 @@
 
             .content-section {
                 width: 100%;
-                overflow-x: auto;
                 padding: 1rem 0;
+                display: flex;
+                justify-content: center;
+                margin-left: 30rem; /* Add margin to shift content right */
             }
 
             .design-showcase {
@@ -46,7 +48,9 @@
                 -webkit-overflow-scrolling: touch;
                 scrollbar-width: none; /* Firefox */
                 -ms-overflow-style: none; /* IE and Edge */
-                width: max-content; /* Allow container to grow based on content */
+                width: 100%; /* Take full width of container */
+                max-width: 1200px; /* Maximum width for the showcase */
+                margin: 0 auto; /* Center the showcase */
             }
 
             .design-showcase::-webkit-scrollbar {
@@ -60,8 +64,8 @@
                 transition: transform 0.3s ease;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
                 scroll-snap-align: start;
-                flex: 0 0 300px; /* Fixed width for each item */
-                width: 300px;
+                flex: 0 0 350px; /* Increased width for better visibility */
+                width: 350px;
             }
 
             .design-item:hover {
@@ -136,14 +140,20 @@
                     padding: 0 1rem;
                 }
 
+                .content-section {
+                    padding: 0.5rem;
+                    margin-left: 0; /* Remove margin on mobile */
+                }
+
                 .design-showcase {
                     gap: 1.5rem;
                     padding: 0.5rem;
+                    max-width: 100%;
                 }
 
                 .design-item {
-                    flex: 0 0 280px; /* Slightly smaller on tablets */
-                    width: 280px;
+                    flex: 0 0 320px; /* Adjusted for tablets */
+                    width: 320px;
                 }
 
                 .design-image {
@@ -151,8 +161,8 @@
                 }
 
                 .design-image img {
-                    width: 180px;
-                    height: 360px;
+                    width: 200px;
+                    height: 400px;
                 }
 
                 .design-title {
@@ -179,14 +189,18 @@
                     padding: 0 0.5rem;
                 }
 
+                .content-section {
+                    padding: 0.5rem;
+                }
+
                 .design-showcase {
                     gap: 1rem;
                     padding: 0.5rem;
                 }
 
                 .design-item {
-                    flex: 0 0 260px; /* Even smaller on mobile */
-                    width: 260px;
+                    flex: 0 0 300px; /* Adjusted for mobile */
+                    width: 300px;
                 }
 
                 .design-image {
@@ -194,8 +208,8 @@
                 }
 
                 .design-image img {
-                    width: 160px;
-                    height: 320px;
+                    width: 180px;
+                    height: 360px;
                 }
 
                 .design-info {
@@ -270,8 +284,8 @@
                     </div> -->
 
                     <div class="design-info">
-                        <h3 class="design-title" style="color: #ff0000;">Eshoppy E-commerce Platform</h3>
-                        <p class="design-description">Modern e-commerce solution...</p>
+                        <h3 class="design-title" style="color: #ff0000;">E-commerce Platform</h3>
+                        <!-- <p class="design-description">Modern e-commerce solution...</p> -->
                         <div class="button-group">
                             <a href="[Figma-Link-1]" target="_blank" class="figma-button">
                                 <i class="fab fa-figma"></i> Figma
@@ -290,7 +304,7 @@
                     </div>
                     <div class="design-info">
                         <h3 class="design-title" style="color: #ff0000;">Music Player App</h3>
-                        <p class="design-description">Next-gen music player interface with dynamic visualizations and smart playlist curation. Designed for discoverability.</p>
+                        <!-- <p class="design-description">Next-gen music player interface with dynamic visualizations and smart playlist curation. Designed for discoverability.</p> -->
                         <a href="https://www.figma.com/design/ms0ZpI5URPpr6YCHWrijFS/UI-Challenge---Spotify?node-id=0-1&p=f&t=PC0TvyGapmkDG3mt-0" target="_blank" class="figma-button">
                             <i class="fab fa-figma"></i> View on Figma
                         </a>
@@ -303,7 +317,7 @@
                     </div>
                     <div class="design-info">
                         <h3 class="design-title" style="color: #ff0000;">Rust Kisumu App</h3>
-                        <p class="design-description">Next-gen music player interface with dynamic visualizations and smart playlist curation. Designed for discoverability.</p>
+                        <!-- <p class="design-description">Next-gen music player interface with dynamic visualizations and smart playlist curation. Designed for discoverability.</p> -->
                         <a href="https://www.figma.com/design/ms0ZpI5URPpr6YCHWrijFS/UI-Challenge---Spotify?node-id=0-1&p=f&t=PC0TvyGapmkDG3mt-0" target="_blank" class="figma-button">
                             <i class="fab fa-figma"></i> View on Figma
                         </a>
@@ -316,7 +330,7 @@
                     </div>
                     <div class="design-info">
                         <h3 class="design-title" style="color: #ff0000;">Crypto Dashboard</h3>
-                        <p class="design-description">Interface with live market insights, interactive charts, and AI-driven portfolio management. Designed for precision and control.</p>
+                        <!-- <p class="design-description">Interface with live market insights, interactive charts, and AI-driven portfolio management. Designed for precision and control.</p> -->
                         <a href="https://www.figma.com/design/58SSHhxCTfZkUBzlfzjwTC/UI-Challenge---Bitcoin-Dashboard?t=OtXObtFwR4ycRrYG-0" target="_blank" class="figma-button">
                             <i class="fab fa-figma"></i> View on Figma
                         </a>
