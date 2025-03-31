@@ -9,6 +9,213 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
         <link rel="icon" href="../images/portfolio/favicon.ico" type="image/x-icon">
+        <style>
+            /* UI Designs Specific Styles */
+            .content-wrapper {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 2rem;
+                margin-left: 380px;
+                width: calc(100% - 380px);
+            }
+
+            .hero-section {
+                margin-bottom: 3rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                color: #ffffffb8;
+            }
+
+            .content-section {
+                width: 100%;
+                overflow-x: auto;
+                padding: 1rem 0;
+            }
+
+            .design-showcase {
+                display: flex;
+                gap: 2rem;
+                padding: 1rem;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none; /* Firefox */
+                -ms-overflow-style: none; /* IE and Edge */
+                width: max-content; /* Allow container to grow based on content */
+            }
+
+            .design-showcase::-webkit-scrollbar {
+                display: none; /* Chrome, Safari, Opera */
+            }
+
+            .design-item {
+                background: #1a1a1a;
+                border-radius: 15px;
+                overflow: hidden;
+                transition: transform 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                scroll-snap-align: start;
+                flex: 0 0 300px; /* Fixed width for each item */
+                width: 300px;
+            }
+
+            .design-item:hover {
+                transform: translateY(-5px);
+            }
+
+            .design-image {
+                width: 100%;
+                height: 414px; /* Increased height for mobile screens */
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* background: #000; */
+            }
+
+            .design-image img {
+                width: 200px; /* Fixed width for mobile screens */
+                height: 400px; /* Fixed height for mobile screens */
+                object-fit: contain; /* Changed to contain to prevent cropping */
+                transition: transform 0.3s ease;
+            }
+
+            .design-item:hover .design-image img {
+                transform: scale(1.05);
+            }
+
+            .design-info {
+                padding: 1.5rem;
+                text-align: center;
+            }
+
+            .design-title {
+                font-size: 1.5rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .design-description {
+                color: #ddd9d9;
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+            }
+
+            .figma-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.8rem 1.5rem;
+                background: #ff0c0c;
+                color: white;
+                border-radius: 8px;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                margin: 0 auto;
+            }
+
+            .figma-button:hover {
+                background: #ff0000;
+                transform: translateY(-2px);
+            }
+
+            /* Mobile Responsiveness */
+            @media (max-width: 992px) {
+                .content-wrapper {
+                    margin-left: 0;
+                    width: 100%;
+                    padding: 1rem;
+                }
+
+                .hero-section {
+                    margin-bottom: 2rem;
+                    padding: 0 1rem;
+                }
+
+                .design-showcase {
+                    gap: 1.5rem;
+                    padding: 0.5rem;
+                }
+
+                .design-item {
+                    flex: 0 0 280px; /* Slightly smaller on tablets */
+                    width: 280px;
+                }
+
+                .design-image {
+                    height: 450px;
+                }
+
+                .design-image img {
+                    width: 180px;
+                    height: 360px;
+                }
+
+                .design-title {
+                    font-size: 1.3rem;
+                }
+
+                .design-description {
+                    font-size: 0.9rem;
+                }
+
+                .figma-button {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+
+            @media (max-width: 576px) {
+                .content-wrapper {
+                    padding: 0.5rem;
+                }
+
+                .hero-title {
+                    font-size: 1.8rem;
+                    padding: 0 0.5rem;
+                }
+
+                .design-showcase {
+                    gap: 1rem;
+                    padding: 0.5rem;
+                }
+
+                .design-item {
+                    flex: 0 0 260px; /* Even smaller on mobile */
+                    width: 260px;
+                }
+
+                .design-image {
+                    height: 400px;
+                }
+
+                .design-image img {
+                    width: 160px;
+                    height: 320px;
+                }
+
+                .design-info {
+                    padding: 1rem;
+                }
+
+                .design-title {
+                    font-size: 1.2rem;
+                }
+
+                .design-description {
+                    font-size: 0.9rem;
+                }
+
+                .figma-button {
+                    padding: 0.6rem 1.2rem;
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
     </head>
 <body>
     <!-- Custom cursor -->
@@ -54,13 +261,13 @@
                     <div class="design-image">
                         <img src="../images/portfolio/eshoppy-removebg-preview.png" alt="Eshoppy E-commerce app">
                     </div>
-                    <div class="design-info">
+                    <!-- <div class="design-info">
                         <h3 class="design-title" style="color: #ff0000;">E-commerce App</h3>
                         <p class="design-description">Modern e-commerce solution featuring personalized product recommendations and seamless checkout flow.</p>                        
                         <a href="https://www.figma.com/design/idqcAKIx3d73rw77abpphe/Animations?t=PC0TvyGapmkDG3mt-0" target="_blank" class="figma-button">
                             <i class="fab fa-figma"></i> View on Figma
                         </a>
-                    </div>
+                    </div> -->
 
                     <div class="design-info">
                         <h3 class="design-title" style="color: #ff0000;">Eshoppy E-commerce Platform</h3>
