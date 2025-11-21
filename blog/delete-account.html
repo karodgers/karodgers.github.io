@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Account Deletion - Rust Kisumu</title>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="../static/blog.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link rel="icon" href="../images/portfolio/favicon.ico" type="image/x-icon">
+        <style>
+            /* Dark Mode Privacy Policy Styles */
+            .privacy-container {
+                max-width: 900px;
+                margin: 0 auto;
+                padding: 2rem;
+                color: #e0e0e0;
+                line-height: 1.6;
+                background-color: #121212;
+            }
+            
+            .privacy-header {
+                text-align: center;
+                margin-bottom: 2.5rem;
+                padding-bottom: 1.5rem;
+                border-bottom: 1px solid #333;
+            }
+            
+            .privacy-header h1 {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+                color: #ff4444; /* Primary red color */
+            }
+            
+            .privacy-header .effective-date {
+                font-size: 1rem;
+                color: #aaa;
+                font-weight: 500;
+            }
+            
+            .privacy-section {
+                margin-bottom: 3rem;
+            }
+            
+            .privacy-section h2 {
+                font-size: 1.8rem;
+                color: #ff4444; /* Primary red color */
+                margin-bottom: 1.5rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid #333;
+            }
+            
+            .privacy-section h3 {
+                font-size: 1.4rem;
+                color: #ff6666; /* Lighter red */
+                margin: 2rem 0 1rem;
+            }
+            
+            .privacy-section p {
+                margin-bottom: 1.2rem;
+                font-size: 1.05rem;
+                color: #e0e0e0;
+            }
+            
+            .privacy-section ul, 
+            .privacy-section ol {
+                margin: 1.5rem 0;
+                padding-left: 2rem;
+            }
+            
+            .privacy-section li {
+                margin-bottom: 0.8rem;
+                color: #e0e0e0;
+            }
+            
+            .highlight-box {
+                background-color: #1e1e1e;
+                border-left: 4px solid #ff4444;
+                padding: 1.5rem;
+                margin: 2rem 0;
+                border-radius: 0 4px 4px 0;
+            }
+            
+            .highlight-box h3 {
+                margin-top: 0;
+                color: #ff4444;
+            }
+            
+            .contact-info {
+                background-color: #1e1e1e;
+                padding: 1.5rem;
+                border-radius: 6px;
+                margin: 2rem 0;
+                border: 1px solid #333;
+            }
+            
+            .contact-info h2 {
+                color: #ff4444;
+                margin-top: 0;
+            }
+            
+            .contact-info p {
+                margin: 0.5rem 0;
+                color: #e0e0e0;
+            }
+            
+            strong {
+                color: #ff6666;
+            }
+            
+            a {
+                color: #ff6666;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+            
+            a:hover {
+                color: #ff4444;
+                text-decoration: underline;
+            }
+            
+            @media (max-width: 768px) {
+                .privacy-container {
+                    padding: 1rem;
+                }
+                
+                .privacy-header h1 {
+                    font-size: 2rem;
+                }
+                
+                .privacy-section h2 {
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <!-- Custom cursor -->
+    <div class="custom-cursor"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="profile-container">
+            <img src="../images/portfolio/rogy.png" alt="Rodgers" class="profile-img">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/" class="active"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="/#services"><i class="fas fa-laptop-code"></i>Services</a></li>
+                <li><a href="/#projects"><i class="fas fa-briefcase"></i>Projects</a></li>
+                <li><a href="/#experience"><i class="fas fa-user"></i>Experience</a></li>
+                <li><a href="/#blog"><i class="fas fa-blog"></i>Blog</a></li>
+                <li><a href="/#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="social-links">
+            <a href="https://x.com/mi_ni_mjanja" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.github.com/karodgers" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rodgers-kaunda/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+        </div>
+    </aside>
+    <!-- hero section -->
+    <div class="hero-section">
+        <div class="content-wrapper">
+            <div class="hero-content">
+                <h1 class="hero-title">Rust Kisumu App Account Deletion</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content-section">
+        <div class="privacy-container">
+            <div class="privacy-header">
+                <h1>Account Deletion Process</h1>
+                <p class="effective-date">Last Updated: 21 November, 2025</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>Data Deletion Policy</h2>
+                <p>This document outlines the process for deleting your account and data from the <strong>Rust Kisumu App</strong>. We are committed to ensuring you have control over your personal information.</p>
+                <p>When you request to delete your account, the following data will be permanently removed from our systems:</p>
+                <ul>
+                    <li>Your account information (email address, profile details).</li>
+                    <li>All your community contributions (posts, comments, replies, likes, dislikes, articles).</li>
+                    <li>Meetup reservations and history.</li>
+                    <li>Any other data associated with your account.</li>
+                </ul>
+                <p>Please note that your account will be disabled immediately upon request, and all data will be permanently deleted within <strong>90 days</strong>. This retention period is to allow for a grace period in case of accidental deletion requests and for our backup cycles to complete.</p>
+            </div>
+
+            <div class="privacy-section">
+                <h2>Steps to Delete Your Account</h2>
+                <p>Follow these steps to permanently delete your account from the Rust Kisumu App.</p>
+
+                <h3>1. Login to the Rust Kisumu App</h3>
+                <p>Open the app and log in with your credentials (if not already logged in).</p>
+
+                <h3>2. Navigate to the Profile Screen</h3>
+                <p>Once logged in, go to your profile section and click on the 'Account Settings' option</p>
+
+                <h3>3. Initiate Account Deletion</h3>
+                <p>You will see the 'Delete Account' section - click on 'Delete Account' button (enter your password if already changed from google auth otherwise directly confirm account deletion).</p>
+                <img src="../images/delete-account/delete-step-3.jpg" alt="Delete account button" style="width:100%; max-width:400px; margin-top:1rem;">
+
+                <h3>4. Confirm Deletion</h3>
+                <p>You will receive a confirm deletion message followed by a success message (if you choose to preed) that your account has been disabled and all your data will be deleted in 90 days.</p>
+                <img src="../images/delete-account/delete-step-4.jpg" alt="Deletion confirmation" style="width:100%; max-width:400px; margin-top:1rem;">
+            </div>
+
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>If you have any questions about the account deletion process, please contact us at:</p>
+                <p><strong>Email</strong>: rustkisumu@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Menu Toggle Button -->
+    <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <script src="../static/blog.js"></script>
+    <script src="../static/script.js"></script>
+
+</body>
+</html>
